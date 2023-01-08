@@ -100,7 +100,6 @@ arrayDeCartas.forEach(elemento => {
 const $cuadricula = document.getElementById("cuadricula");
 
 const devolverIdClickeado = (e) => {
-  console.log(e.target.id);
   voltearCarta(e.target.id);
 };
 $cuadricula.addEventListener("click", devolverIdClickeado);
@@ -180,7 +179,7 @@ function compararCartas( IdCarta ){
     if(parDeCartas[0] !== IdCarta){
         parDeCartas.unshift(IdCarta);
         if(document.querySelector("#" + IdCarta).className === document.querySelector("#" + parDeCartas[1]).className){
-            console.log("bien");
+          
 
             for(let i = 0; i < 12; i++){
                 if( arrayDeCartas[i].idString === IdCarta ){
