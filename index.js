@@ -98,7 +98,6 @@ arrayDeCartas.forEach(elemento => {
 
 
 const $cuadricula = document.getElementById("cuadricula");
-var cuentaCartas = "";
 
 const devolverIdClickeado = (e) => {
   console.log(e.target.id);
