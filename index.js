@@ -104,70 +104,17 @@ const enviarIdClickeado = (e) => {
 };
 $cuadricula.addEventListener("click", enviarIdClickeado);
 
-function voltearCarta(IdCarta) {
-  if (IdCarta === "carta1" && carta1.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta1.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta2" && carta2.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta2.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta3" && carta3.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta3.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta4" && carta4.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta4.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta5" && carta5.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta5.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta6" && carta6.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta6.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta7" && carta7.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta7.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta8" && carta8.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta8.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta9" && carta9.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta9.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta10" && carta10.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta10.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta11" && carta11.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta11.colorFrente;
-      compararCartas(IdCarta);
-  }
-  if (IdCarta === "carta12" && carta12.volteada === false && parDeCartas.length != 2) {
-    document.querySelector("#" + IdCarta).className =
-      "col " + carta12.colorFrente;
-      compararCartas(IdCarta);
-  }
 
-
+function voltearCarta(idCarta){
+  arrayDeCartas.forEach( elemento => {
+    if(elemento.idString === idCarta && elemento.volteada === false && parDeCartas.length != 2){
+      document.querySelector("#" + idCarta).className = "col " + elemento.colorFrente;
+      compararCartas(idCarta);
+    }
+  })
+  
 }
+
 
 const parDeCartas = [];
 
