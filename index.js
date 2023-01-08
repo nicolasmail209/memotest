@@ -99,10 +99,10 @@ arrayDeCartas.forEach(elemento => {
 
 const $cuadricula = document.getElementById("cuadricula");
 
-const devolverIdClickeado = (e) => {
+const enviarIdClickeado = (e) => {
   voltearCarta(e.target.id);
 };
-$cuadricula.addEventListener("click", devolverIdClickeado);
+$cuadricula.addEventListener("click", enviarIdClickeado);
 
 function voltearCarta(IdCarta) {
   if (IdCarta === "carta1" && carta1.volteada === false && parDeCartas.length != 2) {
