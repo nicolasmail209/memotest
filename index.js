@@ -89,19 +89,13 @@ function mezclarArray(array) {
 }
 
 mezclarArray(colores);
+let posicionColores = 0;
 
-carta1.colorFrente = colores[0];
-carta2.colorFrente = colores[1];
-carta3.colorFrente = colores[2];
-carta4.colorFrente = colores[3];
-carta5.colorFrente = colores[4];
-carta6.colorFrente = colores[5];
-carta7.colorFrente = colores[6];
-carta8.colorFrente = colores[7];
-carta9.colorFrente = colores[8];
-carta10.colorFrente = colores[9];
-carta11.colorFrente = colores[10];
-carta12.colorFrente = colores[11];
+arrayDeCartas.forEach(elemento => {
+  elemento.colorFrente = colores[posicionColores];
+  posicionColores++;
+})
+
 
 const $cuadricula = document.getElementById("cuadricula");
 var cuentaCartas = "";
